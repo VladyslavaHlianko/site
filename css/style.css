@@ -48,6 +48,10 @@ table {
 	border-spacing: 0;
 }
 
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
 body{
     line-height: 26px;
     font-size: 16px;
@@ -299,10 +303,6 @@ h3+p{
     .box_content{
         margin: 25px 0;
     }
-    .box svg{
-        stroke-dashoffset: 137;
-        stroke-dasharray: 137;
-    }
 }
 @media screen and (max-width:768px) {
     .list{
@@ -310,5 +310,8 @@ h3+p{
     }
     .flex_box{
         flex: 1 1 48%;
+    }
+    .box svg{
+        font-size: 30px;
     }
 }
