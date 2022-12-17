@@ -303,6 +303,7 @@ h3+p{
     .box_content{
         margin: 25px 0;
     }
+    
 }
 @media screen and (max-width:768px) {
     .list{
@@ -313,5 +314,10 @@ h3+p{
     }
     .box svg{
         font-size: 30px;
+        animation: none;
+    }
+    .box svg text{
+        fill: #020509;
+        stroke: none;
     }
 }
