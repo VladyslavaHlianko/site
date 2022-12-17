@@ -234,6 +234,9 @@ h3+p{
     .header, .footer{
         padding: 20px 0;
     }
+    h2{
+        font-size: 30px;
+    }
     button{
         padding: 20px 36px;
     }
@@ -251,6 +254,9 @@ h3+p{
     }
     .container{
         padding: 0 20px;
+    }
+    .flex .container{
+        padding: 0 10px;
     }
     h3{
         font-size: 20px;
@@ -293,7 +299,12 @@ h3+p{
     .box_content{
         margin: 25px 0;
     }
-    
+    h2{
+        font-size: 26px;
+    }
+    .about_box>div, .work_content>div {
+        margin-top: 55px;
+    }
 }
 @media screen and (max-width:768px) {
     .list{
