@@ -59,20 +59,17 @@ body{
 }
 .wrapper{
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     height: 100%;
 }
 .header{
-    display: flex;
-    flex-flow: row wrap;
-    flex: 1 1;
+    padding: 30px 0;
 }
-.container{
+.header_container{
     display: flex;
-    flex-flow: row wrap;
     max-width: 1320px;
     justify-content: space-between;
-    margin: 30px auto;
+    margin: 0 auto;
     padding: 0 10px;
     flex: 1 1;
 }
@@ -102,12 +99,13 @@ a:hover{
     flex-grow: 1;
 }
 .design{
-    background: rgba(255, 206, 56, 0.05);    
+    background: rgba(255, 206, 56, 0.05);        
+    padding: 155px 0 180px;
 }
-.content{
+.container{
     margin: 0 auto;
     max-width: 1320px;
-    padding: 155px 10px 180px;
+    padding: 0 10px;    
 }
 .box{
     max-width: 540px;
@@ -121,10 +119,9 @@ button{
     background: #FFCE38;
     border-radius: 4px;
     color: #020509;
-    padding: 25px 0;
+    padding: 25px 41px;
     cursor: pointer;
     border: none;
-    width: 225px;
     text-transform: uppercase;
     transition: all .3s linear;
 }
@@ -133,11 +130,7 @@ button:hover{
 }
 .about{
     background: #00CFFA0D;
-}
-.about_content{
-    margin: 0 auto;
-    max-width: 1320px;
-    padding: 85px 10px;
+    padding: 85px 0;
     text-align: center;
 }
 .about_box{
@@ -180,19 +173,19 @@ h3{
 h3+p{
     color: #FFFFFF;
 }
+.flex{
+    padding: 85px 0 80px;    
+}
 .flex_content{
     align-items: center;
     justify-content: space-between;
     display: flex;
-    flex-flow: row wrap;
-    max-width: 1320px;
-    margin: 0 auto;
+    flex-wrap: wrap;
     gap: 14px;
-    padding: 85px 10px 80px;
 }
 .flex_box>div{
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     margin-top: 10px;
     gap: 10px;
     flex: 1 1;
@@ -205,15 +198,8 @@ h3+p{
 }
 .work{
     background: rgba(0, 207, 250, 0.05);
-}
-.work_box{
-    max-width: 1320px;
-    margin: 0 auto;
     text-align: center;
-    padding: 0 10px 70px;
-}
-.work_box>img{
-    max-width: 100%;
+    padding-bottom: 70px;
 }
 .work_content{
     max-width: 540px;
@@ -226,6 +212,7 @@ h3+p{
 }
 .work_content+img{
     margin-bottom: 70px;
+    max-width: 100%;
 }
 .footer{
     color: #FFFFFF;
@@ -233,33 +220,37 @@ h3+p{
     padding: 30px 0;
     font-size: 18px;
 }
-
+.footer p{
+    color: #FFFFFF;
+}
 
 @media all and (max-width:1200px){
-    .work_box>img{
+    .work_content+img{
         max-width: 90%;
     }
     .flex_box{
         flex: 1 1 15%;
     }
-    .container{
-        margin: 20px auto;
-    }
-    .footer{
+    .header, .footer{
         padding: 20px 0;
     }
     button{
-        padding: 20px 0;
-        width: 200px;
+        padding: 20px 36px;
     }
     .footer, .logo, .list{
         font-size: 16px;
     }
-    .flex_content{
-        padding: 65px 5px 60px;
+    .flex{
+        padding: 65px 0 60px;
     }
-    .content{
-        padding: 135px 20px 160px;
+    .about{
+        padding: 75px 0;
+    }
+    .design{
+        padding: 135px 0 160px;        
+    }
+    .container{
+        padding: 0 20px;
     }
     h3{
         font-size: 20px;
@@ -275,24 +266,23 @@ h3+p{
     .flex_box{
         flex: 1 1 32%;
     }
-    .container{
-        margin: 10px auto;
-    }
-    .footer{
+    .header, .footer{
         padding: 10px 0;
     }
     button{
-        padding: 15px 0;
-        width: 160px;
+        padding: 15px 31px;
     }
     .footer, .logo, .list{
         font-size: 14px;
     }
-    .flex_content{
-        padding: 45px 5px 40px;
+    .about{
+        padding: 65px 0;
     }
-    .content{
-        padding: 100px 20px 125px;
+    .flex{
+        padding: 45px 0 40px;
+    }
+    .design{
+        padding: 100px 0 125px;        
     }
     h3{
         font-size: 18px;
