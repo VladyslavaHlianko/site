@@ -82,12 +82,16 @@ a{
     color: #FFFFFF;
     text-transform: uppercase;
     text-decoration: none;
+    display: block;
+}
+a:hover{
+    color: #adadad;
 }
 .list{
     display: flex;
     column-gap: 40px;
 }
-.active{
+.list li .active{
     color: #FF0038;
 }
 .main{
@@ -103,6 +107,7 @@ a{
 }
 .box{
     width: 540px;
+    position: relative;
 }
 .box_content{
     margin-top: 45px;
@@ -117,6 +122,10 @@ button{
     border: none;
     width: 225px;
     text-transform: uppercase;
+    transition: all .3s linear;
+}
+button:hover{
+    background: #fab730;
 }
 .about{
     background: #00CFFA0D;
@@ -134,10 +143,19 @@ button{
 .about_box>div{
     margin-top: 65px;
 }
-h1{
-    color: #020509;
+.box svg{
     font-size: 48px;
     font-weight: 600;
+    height: 50px;
+    width: 420px;
+    stroke-dashoffset: 164;
+    stroke-dasharray: 164;
+    animation: text 2s linear .2s forwards;
+}
+@keyframes text {
+    100%{
+        stroke-dashoffset: 0;
+    }
 }
 p{
     color:#727272;
@@ -242,8 +260,11 @@ h3+p{
     h3{
         font-size: 20px;
     }
-    h1{
+    .box svg{
         font-size: 44px;
+    }
+    .box_content{
+        margin: 40px 0;
     }
 }
 @media screen and (max-width:992px) {
@@ -272,8 +293,11 @@ h3+p{
     h3{
         font-size: 18px;
     }
-    h1{
+    .box svg{
         font-size: 40px;
+    }
+    .box_content{
+        margin: 25px 0;
     }
 }
 @media screen and (max-width:768px) {
